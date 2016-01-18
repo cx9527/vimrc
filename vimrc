@@ -1,5 +1,6 @@
 filetype plugin indent on
 set autoindent
+set smartindent
 
 
 """"""""""""""""""""""""""""""""""""""""""""
@@ -8,7 +9,7 @@ colorscheme desert
 set background=dark
 set showcmd
 set mouse=a
-" set cursorline
+set cursorline
 set nu
 set wildmenu
 
@@ -21,6 +22,7 @@ set hlsearch
 """"""""""""""""""""""""""""""""""""""""""""
 " color
 syntax enable
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -30,4 +32,5 @@ set softtabstop=4
 " mapping
 let mapleader=","
 nnoremap <C-H> gg
-nnoremap <C-E> G
+nnoremap <C-E> G$
+vnoremap Y "*y
