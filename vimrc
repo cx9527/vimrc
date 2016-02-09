@@ -1,4 +1,3 @@
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -7,6 +6,9 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'taglist.vim'
+Plugin 'winmanager'
+Plugin 'Valloric/YouCompleteMe'
 
 "
 " " All of your Plugins must be added before the following line
@@ -64,6 +66,31 @@ set softtabstop=4
 let mapleader=","
 nnoremap <C-H> gg
 nnoremap <C-E> G$
+
+" global copy
 vnoremap Y "*y
 
-nnoremap <F3> :NERDTreeToggle<CR>
+" left pane
+nnoremap <F3> :WMToggle<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""
+" left pane
+" NerdTree & TagList use WinManager
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+let g:NERDTree_title='NERD Tree'
+let g:winManagerWindowLayout='NERDTree|TagList'  
+function! NERDTree_Start()  
+    exec 'NERDTree'  
+endfunction  
+      
+function! NERDTree_IsValid()  
+    return 1  
+endfunction 
+
+""""""""""""""""""""""""""""""""""""""""""""
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '/Users/cx/.ycm_global_ycm_extra_conf'
+let g:ycm_confirm_extra_conf = '0'
+
