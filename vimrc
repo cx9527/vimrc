@@ -72,6 +72,7 @@ vnoremap Y "*y
 
 " left pane
 nnoremap <F3> :WMToggle<CR>
+set pastetoggle=<F10>
 
 
 """"""""""""""""""""""""""""""""""""""""""""
