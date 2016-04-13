@@ -9,6 +9,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'taglist.vim'
 Plugin 'winmanager'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
+Plugin 'jiangmiao/auto-pairs'
 
 "
 " " All of your Plugins must be added before the following line
@@ -73,6 +75,8 @@ vnoremap Y "*y
 " left pane
 nnoremap <F3> :WMToggle<CR>
 set pastetoggle=<F10>
+
+inoremap ( ()<ESC>i
 
 
 """"""""""""""""""""""""""""""""""""""""""""
