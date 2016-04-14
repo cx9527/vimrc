@@ -11,6 +11,8 @@ Plugin 'winmanager'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 "
 " " All of your Plugins must be added before the following line
@@ -47,6 +49,7 @@ set mouse=a
 set cursorline
 set nu
 set wildmenu
+set laststatus=2
 
 """"""""""""""""""""""""""""""""""""""""""""
 " searching
