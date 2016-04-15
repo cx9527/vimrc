@@ -102,3 +102,9 @@ endfunction
 let g:ycm_global_ycm_extra_conf = '/Users/cx/.ycm_global_ycm_extra_conf'
 let g:ycm_confirm_extra_conf = '0'
 
+
+""""""""""""""""""""""""""""""""""""""""""""
+" restore cursor position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
