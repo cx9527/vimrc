@@ -81,6 +81,9 @@ set pastetoggle=<F10>
 
 inoremap ( ()<ESC>i
 
+" format code
+nnoremap <leader>fm ggVG=
+
 
 """"""""""""""""""""""""""""""""""""""""""""
 " left pane
