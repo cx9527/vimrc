@@ -83,6 +83,7 @@ inoremap ( ()<ESC>i
 
 " format code
 nnoremap <leader>fm ggVG=
+nnoremap <leader>cl :nohl<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""
