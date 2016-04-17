@@ -112,3 +112,6 @@ let g:ycm_confirm_extra_conf = '0'
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" airline theme
+let g:airline_theme='base16_google'
