@@ -140,11 +140,30 @@ if has("cscope")
   set csverb
 endif
 
-nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+" Find C symblic
+cmap fs cs find s 
+" Find defination
+cmap fg cs find g 
+" Find functions that are called by this function
+cmap fd cs find d 
+" Find functions that are call this function
+cmap fc cs find c 
+" Find this string
+cmap ft cs find t 
+" Find this egrep
+cmap fe cs find e 
+" Find this file
+cmap fl cs find f 
+" Find files that are include this file
+cmap fn cs find i 
+
+
+nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
