@@ -8,7 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'taglist.vim'
 Plugin 'winmanager'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-airline/vim-airline'
@@ -42,6 +42,7 @@ set backspace=indent,eol,start
 
 """"""""""""""""""""""""""""""""""""""""""""
 " UI
+""""""""""""""""""""""""""""""""""""""""""""
 colorscheme desert
 set background=dark
 set showcmd
@@ -53,12 +54,14 @@ set laststatus=2
 
 """"""""""""""""""""""""""""""""""""""""""""
 " searching
+""""""""""""""""""""""""""""""""""""""""""""
 set incsearch
 set hlsearch
 
 
 """"""""""""""""""""""""""""""""""""""""""""
 " color
+""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 set expandtab
 set tabstop=4
@@ -68,12 +71,13 @@ set softtabstop=4
 
 """"""""""""""""""""""""""""""""""""""""""""
 " mapping
+""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=","
 nnoremap <C-H> gg
 nnoremap <C-E> G$
 
 " global copy
-vnoremap Y "*y
+vnoremap Y "+y
 
 " left pane
 nnoremap <F3> :WMToggle<CR>
@@ -89,6 +93,7 @@ nnoremap <leader>cl :nohl<CR>
 """"""""""""""""""""""""""""""""""""""""""""
 " left pane
 " NerdTree & TagList use WinManager
+""""""""""""""""""""""""""""""""""""""""""""
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let g:NERDTree_title='NERD Tree'
@@ -103,15 +108,43 @@ endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe
+""""""""""""""""""""""""""""""""""""""""""""
 let g:ycm_global_ycm_extra_conf = '/Users/cx/.ycm_global_ycm_extra_conf'
 let g:ycm_confirm_extra_conf = '0'
 
 
 """"""""""""""""""""""""""""""""""""""""""""
 " restore cursor position
+""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 " airline theme
 let g:airline_theme='base16_google'
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""
+" cscope setting
+""""""""""""""""""""""""""""""""""""""""""""
+if has("cscope")
+  set csprg=/usr/bin/cscope
+  set csto=1
+  set cst
+  set nocsverb
+  " add any database in current directory
+  if filereadable("cscope.out")
+      cs add cscope.out
+  endif
+  set csverb
+endif
+
+nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
