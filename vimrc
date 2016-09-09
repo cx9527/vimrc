@@ -39,11 +39,13 @@ set smartindent
 set nocompatible
 set backspace=indent,eol,start
 
+set fdm=syntax
+
 
 """"""""""""""""""""""""""""""""""""""""""""
 " UI
 """"""""""""""""""""""""""""""""""""""""""""
-colorscheme desert
+colorscheme luna-term
 set background=dark
 set showcmd
 set mouse=a
@@ -77,7 +79,7 @@ nnoremap <C-H> gg
 nnoremap <C-E> G$
 
 " global copy
-vnoremap Y "+y
+vnoremap <C-y> "+y
 
 " left pane
 nnoremap <F3> :WMToggle<CR>
@@ -89,6 +91,12 @@ inoremap ( ()<ESC>i
 nnoremap <leader>fm ggVG=
 nnoremap <leader>cl :nohl<CR>
 
+nnoremap <C-o> zA
+
+nnoremap <C-h> 10h
+nnoremap <C-j> 10j
+nnoremap <C-k> 10k
+nnoremap <C-l> 10l
 
 """"""""""""""""""""""""""""""""""""""""""""
 " left pane
@@ -129,7 +137,7 @@ let g:airline_theme='base16_google'
 " cscope setting
 """"""""""""""""""""""""""""""""""""""""""""
 if has("cscope")
-  set csprg=/usr/bin/cscope
+  set csprg=/usr/local/bin/cscope
   set csto=1
   set cst
   set nocsverb
@@ -142,21 +150,21 @@ endif
 
 
 " Find C symblic
-cmap fs cs find s 
+cmap ,s cs find s 
 " Find defination
-cmap fg cs find g 
+cmap ,g cs find g 
 " Find functions that are called by this function
-cmap fd cs find d 
+cmap ,d cs find d 
 " Find functions that are call this function
-cmap fc cs find c 
+cmap ,c cs find c 
 " Find this string
-cmap ft cs find t 
+cmap ,t cs find t 
 " Find this egrep
-cmap fe cs find e 
+cmap ,e cs find e 
 " Find this file
-cmap fl cs find f 
+cmap ,l cs find f 
 " Find files that are include this file
-cmap fn cs find i 
+cmap ,n cs find i 
 
 
 nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
