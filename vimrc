@@ -137,7 +137,8 @@ let g:airline_theme='base16_google'
 " cscope setting
 """"""""""""""""""""""""""""""""""""""""""""
 if has("cscope")
-  set csprg=/usr/local/bin/cscope
+  let cs_path = system("which cscope")
+  execute "set csprg=".cs_path
   set csto=1
   set cst
   set nocsverb
