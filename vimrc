@@ -8,7 +8,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'taglist.vim'
 Plugin 'winmanager'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-airline/vim-airline'
@@ -54,22 +55,18 @@ set nu
 set wildmenu
 set laststatus=2
 
-""""""""""""""""""""""""""""""""""""""""""""
-" searching
-""""""""""""""""""""""""""""""""""""""""""""
-set incsearch
-set hlsearch
-
-
-""""""""""""""""""""""""""""""""""""""""""""
-" color
-""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set scrolloff=8
 
+""""""""""""""""""""""""""""""""""""""""""""
+" searching
+""""""""""""""""""""""""""""""""""""""""""""
+set incsearch
+set hlsearch
 
 """"""""""""""""""""""""""""""""""""""""""""
 " mapping
@@ -117,8 +114,20 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe
 """"""""""""""""""""""""""""""""""""""""""""
-let g:ycm_global_ycm_extra_conf = '/Users/cx/.ycm_global_ycm_extra_conf'
+let g:ycm_global_ycm_extra_conf = '/Users/cx/.vim/bundle/YouCompleteMe//third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = '0'
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""
+" NERD Commenter
+""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCommentEmptyLines = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""
