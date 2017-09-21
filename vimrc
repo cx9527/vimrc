@@ -98,6 +98,11 @@ nnoremap <C-j> 10j
 nnoremap <C-k> 10k
 nnoremap <C-l> 10l
 
+vnoremap <C-h> 10h
+vnoremap <C-j> 10j
+vnoremap <C-k> 10k
+vnoremap <C-l> 10l
+
 """"""""""""""""""""""""""""""""""""""""""""
 " left pane
 " NerdTree & TagList use WinManager
