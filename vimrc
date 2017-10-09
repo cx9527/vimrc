@@ -20,6 +20,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'kien/ctrlp.vim'
 Plug 'Yggdroot/LeaderF'
 Plug 'vim-scripts/a.vim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -36,7 +37,8 @@ set backspace=indent,eol,start
 """"""""""""""""""""""""""""""""""""""""""""
 " UI
 """"""""""""""""""""""""""""""""""""""""""""
-colorscheme luna-term
+" colorscheme luna-term
+colorscheme gruvbox
 set t_Co=256
 set background=dark
 set showcmd
@@ -140,7 +142,7 @@ if has("autocmd")
 endif
 
 " airline theme
-let g:airline_theme='base16_google'
+" let g:airline_theme='base16_google'
 
 
 
