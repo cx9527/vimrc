@@ -6,7 +6,6 @@ filetype off                  " required
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'VundleVim/Vundle.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-scripts/winmanager'
