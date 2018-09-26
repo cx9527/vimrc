@@ -71,7 +71,7 @@ nnoremap <C-E> G$
 vnoremap <C-y> "+y
 
 " left pane
-nnoremap <F3> :WMToggle<CR>
+nnoremap <F3> :NERDTreeToggle<CR>
 set pastetoggle=<F10>
 
 " header/source file switch
